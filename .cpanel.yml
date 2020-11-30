@@ -1,5 +1,6 @@
 ---
 deployment:
-  tasks:
-    - export DEPLOYPATH=/home/dhrxjjobkwgg/public_html/
-    - /bin/cp -R * $DEPLOYPATH
+ tasks:
+ - export DEPLOYPATH=/home/dhrxjjobkwgg/public_html/
+ - /bin/cp index.html $DEPLOYPATH
+ - /bin/cp style.css $DEPLOYPATH
