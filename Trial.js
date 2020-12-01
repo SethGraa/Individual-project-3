@@ -18,37 +18,16 @@
 								console.log(e);
 								return e;
 		});
-
-						var resp = await fetch('http://ddragon.leagueoflegends.com/cdn/10.23.1/data/en_US/champion.json');
+						var resp = await fetch('http://ddragon.leagueoflegends.com/cdn/10.23.1/data/en_US/championFull.json');
 						var json = await resp.json()
-						var thing = 8
-						Object.values(json.data).forEach(value => {
-							console.log(value);
-							var para = document.createElement("p")
-							var node = document.createTextNode(value.name)
-							para.appendChild(node);
-							var element = document.getElementById("namess")
-							element.appendChild(para);
-							// Search thru json file using those values
-						}
-						)
-	
-const champData = 'http://ddragon.leagueoflegends.com/cdn/10.23.1/data/en_US/championFull.json'
-const champion =  'https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion/'+ 12  +'?champData=name&api_key=' + ApiKey
-fetch(champData)
-  					.then(blob => blob.json())
-					.then(data => {
-						console.log(data);
-						const thing ='2';
-						names =['hi']
+						let thing =[13,5];
+						names =[];
+						for (var i=0; i< thing.length; i++){
+							Object.values(json.data).forEach(value => {
+								console.log(json.data[json.keys[thing[i]]].name);
+								names.push(json.data[json.keys[thing[i]]].name);
+							})
+							document.getElementById("hehe").innerHTML=names;}
+							}
 
-					
-
-						document.getElementById("names").innerHTML= names
-					})
-					.catch(e => {
-						console.log(e);
-						return e;
-					});
-				};
-				getFreeChamps();
+					getFreeChamps();
