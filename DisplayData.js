@@ -8,7 +8,6 @@ Object.values(json.data).forEach(value => {
     var img = document.createElement('img')
     img.src =('http://ddragon.leagueoflegends.com/cdn/10.24.1/img/champion/'+ value.id + '.png')
     var node = document.createTextNode(value.name)
-
     para.appendChild(node);
     var element = document.getElementById("namu")
     element.appendChild(img)
